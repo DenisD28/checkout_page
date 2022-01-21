@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+:root{
+    --fontPrincipal: 'Montserrat', sans-serif;
+    --price-color: #F2994A;
+    --price-color2:#4E5150;
+    --font-color: #4E5150;
+    --font-color2: #333333;
+    --font-color3: #828282;
+    --font-color4: #f2f2f2;
+}
+
+html{
+    box-sizing: border-box;
+    margin:0;
+}
+
+.clearfix{
+    clear:both;
+}
+
+header h1{
+    font-family: var(--fontPrincipal);
+    color: var(--font-color);
+    font-size: 1.5rem;
+}
+
+#productos{
+    background-color: var(--font-color4);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.products{
+    display: flex;
+    justify-content: justify;
+    grid-gap:1rem;
+    padding: 1rem;
+    color: var(--font-color);
+    font-size: 0.75rem;
+}
+
+.price .precio{
+    color: var(--price-color);
+    font-size: 14px;
+}
+
+.desc{
+    padding-left: 0.75rem;
+    color:#000000;
+    font-size: 0.75rem;
+    text-decoration: line-through;
+}
+
+.products .img img{
+    border-radius: 16px;
+    height: 20vh;
+}
+
+.cantidad{
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    border: 1px solid #828282;
+    border-radius: 12px;
+    width: 7rem;
+}
+
+.cantidad button{
+    border:none;
+    border-radius: 4px;
+    background-color: #E0E0E0;
+    color:var(--font-color3);
+    width: 19px;
+    height: 19px;
+}
+
+.totales{
+    padding:0 1rem 0 1rem;
+}
+
+.totales .envio, .total{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #BDBDBD;
+    font-size: 0.875rem;
+}
+
+.envio p, .totales p{
+    font-family: var(--fontPrincipal);
+    font-size: 0.875rem;
+}
+
+/********contact information**********/
+.contact-information, .shipping-add, .postal-code{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+}
+
+.contact-information h1, .shipping-add h1{
+    font-family: var(--fontPrincipal);
+    font-size: 0.875rem;
+    color: var(--font-color2);
+}
+
+.contact-information label, .shipping-add label{
+    font-size: 0.625rem;
+    font-family: var(--fontPrincipal);
+    color:#4F4F4F;
+    margin-top: 10px;
+}
+
+.contact-information input, .shipping-add input, .shipping-add select{
+    border:1px solid var(--font-color3);
+    border-radius: 12px;
+    color: var(--font-color3);
+    height: 2.5rem;
+}
+
+.postal-code{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+}
+
+.postal-code label{
+    grid-row: 1;
+}
+.postal-code #postal{
+    grid-column: 1;
+}
+
+.postal-code #country{
+    grid-column: 2;
+}
+
+.btncontinue{
+    float: right;
+    margin:14px;
+    width: 166px;
+    height: 54px;
+    background-color: var(--price-color);
+    border-radius: 12px;
+    border: none;
+    font-family: var(--fontPrincipal);
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.checkbox{
+    display: flex;
+    align-content: center;
+}
+
+.checkbox label{
+    margin-top: 16px;
+}
+
+footer{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+footer p{
+    font-family: var(--fontPrincipal);
+    font-size: 14px;
+    color: #BDBDBD;   
+}
+
+/***********responsive************/
+
+@media  screen and (min-width: 425px) {
+    body{
+        margin:20px;
+    }
+    main{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        grid-gap: 90px;
+    }
+
+
+    header{
+        display: flex;
+        justify-content: left;
+    }
+}
